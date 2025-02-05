@@ -248,7 +248,7 @@ const handlePlantsClick = (e) => {
     e.preventDefault();
     setShowCart(false);
   };
-  const handleAddToCart = (product) => {
+  const handleAdd_Cart = (product) => {
     dispatch(addItem(product));
     set_Added_Cart((prevState) => ({
        ...prevState,
@@ -286,7 +286,7 @@ const handlePlantsClick = (e) => {
                 <img className="product-image" src={plant.image} alt={plant.name} />
                 <div className="product-title">{plant.name}</div>
                 {/*Similarly like the above plant.name show other details like description and cost*/}
-                <button  className="product-button" onClick={() => handleAddToCart(plant)}>Add to Cart</button>
+                <button  className="product-button" onClick={() => handleAdd_Cart(plant)}>Add to Cart</button>
             </div>
             ))}
         </div>
